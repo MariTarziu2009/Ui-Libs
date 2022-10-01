@@ -1,0 +1,14 @@
+local lib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
+local win = lib:Window("Name Script",Color3.fromRGB(255,215,0), Enum.KeyCode.V) --- UI Toggel
+
+local tab = win:Tab("Credits") -- Create Tabs
+
+tab:Label("Text") -- Label
+
+tab:Button("Button", function() -- Buton
+
+end)
+
+tab:Slider("WalkSpeed",0,150,50, function(t) -- Slider
+
+end)
