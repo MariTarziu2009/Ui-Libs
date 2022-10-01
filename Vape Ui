@@ -3,12 +3,40 @@ local win = lib:Window("Name Script",Color3.fromRGB(255,215,0), Enum.KeyCode.V) 
 
 local tab = win:Tab("Credits") -- Create Tabs
 
-tab:Label("Text") -- Label
 
 tab:Button("Button", function() -- Buton
+
+end)
+
+tab:Toggle("Toggle",false, function(t) -- Toggel
 
 end)
 
 tab:Slider("WalkSpeed",0,150,50, function(t) -- Slider
 
 end)
+
+tab:Dropdown("Dropdown",{"Option 1","Option 2","Option 3","Option 4","Option 5"}, function(t) -- Dropdown 
+
+end)
+
+tab:Colorpicker("Colorpicker",Color3.fromRGB(255,0,0), function(t) -- Colorpick
+
+end)
+
+tab:Textbox("Textbox",true, function(t) -- TextBox
+
+end)
+
+tab:Bind("Bind",Enum.KeyCode.RightShift, function() -- Bind
+
+end)
+
+tab:Label("Label") -- Label
+
+local changeclr = win:Tab("Change UI Color") -- Change Ui Color
+
+changeclr:Colorpicker("Change UI Color",Color3.fromRGB(44, 120, 224), function(t) -- Colorpicker Change UI Color
+lib:ChangePresetColor(Color3.fromRGB(t.R * 255, t.G * 255, t.B * 255))
+end)
+
